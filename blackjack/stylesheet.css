@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #111114;
+    color: #f8f8f8;
+}
+
+body {
+    background: #222228;
+    color: #f8f8f8;
+    font-family: Calibri, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-image: url(stock_background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    border-radius: 16px;
+    color: #f8f8f8;
+    width: 80vw;
+    max-width: 600px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+h3 {
+    background: #77DD77;
+    color: #111114;
+    border-radius: 12px;
+    padding: 32px 16px;
+    display: inline-block;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    color: #111114;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 8px;
+}
+
+button:hover {
+    background: #E8E8E8;
+}
+
+#information-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+#cards-container {
+    flex-grow: 1;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#alert-message {
+    background-color: rgba(151, 33, 33, 0.75);
+    border: rgb(185, 6, 6) solid 2px;
+    transform: scaleY(0);
+    transform-origin: top;
+    color: #f8f8f8;
+    border-radius: 12px;
+    padding: 16px 16px;
+    margin: 8px 0;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+

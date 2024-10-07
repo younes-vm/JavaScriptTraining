@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <main>
+        <h1>Simple Blackjack</h1>
+        <div>
+            <h2>Welcome to Simple Blackjack</h2>
+            <div id="controls">
+                <button onclick="newCard()">New Card</button>
+                <button onclick="restartGame()">Restart Game</button>
+            </div>
+            <div id="information-container">
+                <h3 id="cards-container">Cards: <span id="cards-info"></span></h3>
+                <h3>Sum: <span id="cards-sum"></span></h3>
+            </div>
+            <div id="alerts">
+                <p id="alert-message"></p>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
