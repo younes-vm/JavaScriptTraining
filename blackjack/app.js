@@ -6,6 +6,7 @@ let alert = document.getElementById("alert-message");
 let cardsInfo = document.getElementById("cards-info");
 let cardsSum = document.getElementById("cards-sum");
 let cardNames = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+let cardValues = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
 restartGame();
 
 function restartGame() {
@@ -17,7 +18,7 @@ function restartGame() {
     message = "";
     cards.push(Math.floor(Math.random() * 13) + 1);
     cards.push(Math.floor(Math.random() * 13) + 1);
-    sum = cards.reduce((a, b) => a + b, 0);
+    sum += cardValues[cards[0] - 1] + cardValues[cards[1] - 1];
     cardsSum.textContent = sum;
     for (let i = 0; i < cards.length; i++) {
         cardsInfoNames.push(cardNames[cards[i] - 1]);
@@ -42,7 +43,7 @@ function newCard() {
     cards.push(Math.floor(Math.random() * 13) + 1);
     cardsInfoNames.push(cardNames[cards[cards.length - 1] - 1]);
     cardsInfo.innerHTML = cardsInfoNames;
-    sum = cards.reduce((a, b) => a + b, 0);
+    sum += cardValues[cards[cards.length - 1] - 1];
     cardsSum.textContent = sum;
 
     if (sum < 21) {
